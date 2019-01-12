@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/18 12:35:40 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/18 19:07:56 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include <iomanip>
 #include <iostream>
@@ -27,9 +16,9 @@ int	main(void)
 		std::cout << "Choose the command ADD, SEARCH or EXIT:" << std::endl;
 		std::getline(std::cin, cmd);
 
-		if (cmd.compare("EXIT") == 0)
+		if (cmd.compare("EXIT") == 0 || cmd.compare("exit") == 0)
 			return (0);
-		else if (cmd.compare("ADD") == 0)
+		else if (cmd.compare("ADD") == 0 || cmd.compare("add") == 0)
 		{
 			if (i < 7)
 			{
@@ -39,24 +28,32 @@ int	main(void)
 			else
 				std::cout << "Sorry, you can`t store more than 8 contacts" << std::endl;
 		}
-		else if (cmd.compare("SEARCH") == 0)
+		else if (cmd.compare("SEARCH") == 0 || cmd.compare("search") == 0)
 		{
-			std::cout << "     index|first name| last name|  nickname" << std::endl;
-			for (int j = 0; j < i; j++)
-			{
-				std::cout << std::setw(10) << j;
-				phonebook[j].showShortInfo();
+			if (i > 0) {
+				std::cout << "     index|first name| last name|  nickname" << std::endl;
+				for (int j = 0; j < i; j++) {
+					std::cout << std::setw(10) << j;
+					phonebook[j].showShortInfo();
+				}
+				std::cout << "Choose index of the desired entry:" << std::endl;
+
+				std::string str;
+				int idx;
+
+				std::getline(std::cin, str);
+				if (!isdigit(str[0]))
+					idx = -1;
+				else
+					idx = atoi(str.c_str());
+
+				if (idx >= 0 && idx < i)
+					phonebook[idx].showInfo();
+				else
+					std::cout << "Index doesn't exists." << std::endl;
 			}
-			std::cout << "Choose index of the desired entry:" << std::endl;
-			std::string str;
-			int	idx;
-			std::getline(std::cin, str);
-			if (!isdigit(str[0]))
-				idx = -1;
 			else
-				idx = atoi(str.c_str());
-			if (idx >= 0 && idx < i)
-				phonebook[idx].showInfo();
+				std::cout << "No contacts found." << std::endl;
 		}
 	}
 	return (0);

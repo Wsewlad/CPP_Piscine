@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Contact.class.cpp                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/18 11:12:12 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/18 19:02:52 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include <iostream>
 #include <string>
@@ -19,8 +9,8 @@ Contact::Contact(void) {}
 
 Contact::~Contact(void) {}
 
-void	Contact::setCfields(void)
-{
+void	Contact::setCfields(void) {
+
 	this->_cfields_names[0] = "first name";
 	this->_cfields_names[1] = "last name";
 	this->_cfields_names[2] = "nickname";
