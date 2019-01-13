@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 18:15:04 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/19 20:10:08 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "Zombie.hpp"
 #include "ZombieHorde.hpp"
@@ -18,17 +8,17 @@
 
 ZombieHorde::ZombieHorde(int N) : n(N)
 {
-	horde = new Zombie[n];
+	this->horde = new Zombie[n];
 	return;
 }
 
 ZombieHorde::~ZombieHorde(void)
 {
-	delete [] horde;
+	delete [] this->horde;
 	return;
 }
 
-void	ZombieHorde::announce(void)
+void	ZombieHorde::announce(void) const
 {
 	for (int i = 0; i < this->n; i++)
 		horde[i].announce();

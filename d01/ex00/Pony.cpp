@@ -1,22 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Pony.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 13:38:08 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/19 14:53:22 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
-#include <iostream>
+
 #include "Pony.hpp"
 
 Pony::Pony(void)
 {
 	std::cout << "New pony born" << std::endl;
-	this->name = "Pony";
+	this->name = "Just a Pony";
 	return;
 }
 
@@ -42,5 +31,5 @@ void	Pony::setName(std::string nm)
 void	Pony::showName(void)
 {
 	std::cout << this->name << std::endl;
-return;
+	return;
 }

@@ -1,17 +1,12 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/19 15:06:31 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/19 18:14:19 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "ZombieEvent.hpp"
 #include <ctime>
+
+ZombieEvent::ZombieEvent::ZombieEvent(void) : type("default type")
+{
+	return;
+}
 
 void	ZombieEvent::setZombieType(std::string type)
 {

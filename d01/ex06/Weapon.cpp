@@ -1,27 +1,20 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 13:45:17 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/20 14:34:44 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "Weapon.hpp"
 
 Weapon::Weapon(void)
 {
+	return;
 }
 
 Weapon::Weapon(std::string tp) : _type(tp)
 {
+	return;
 }
 
 Weapon::~Weapon(void)
 {
+	return;
 }
 
 std::string const&	Weapon::getType(void)

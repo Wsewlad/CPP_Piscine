@@ -1,43 +1,49 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 14:56:20 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/20 14:56:21 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include <iostream>
 #include <fstream>
 
 int	main(int argc, char const *argv[])
 {
-	if (argc != 4)
+	if (argc == 4)
 	{
-		std::cout << "Must be 3 aruments!" << std::endl;
-		return (1);
-	}
-	std::string		fname(argv[1]);
-	std::string		s1(argv[2]);
-	std::string		s2(argv[3]);
+		std::string		fname(argv[1]);
+		std::ifstream	ifs(fname);
 
-	std::ifstream	ifs(fname);
-	if (ifs.is_open())
-	{
-		std::ofstream	ofs(fname += ".replace");
-		std::string		str;
-		while (std::getline(ifs, str))
+		if (ifs.is_open())
 		{
-			std::string::size_type pos;
-			while ((pos = str.find(s1)) != std::string::npos)
-				str.replace(pos, s1.length(), s2);
-			ofs << str << std::endl;
+			std::string		s1(argv[2]);
+			std::string		s2(argv[3]);
+			std::ofstream ofs(fname += ".replace");
+
+			if (!s1.empty() && !s2.empty())
+			{
+				std::string str;
+				bool somethingReplaced = false;
+
+				while (std::getline(ifs, str, '\0'))
+				{
+					std::string::size_type pos;
+					if (s1.compare(s2) != 0)
+						while ((pos = str.find(s1)) != std::string::npos)
+						{
+							str.replace(pos, s1.length(), s2);
+							somethingReplaced = true;
+						}
+					ofs << str << std::endl;
+				}
+				if (!somethingReplaced)
+					std::cout << "Nothing to replace." << std::endl;
+			}
+			else
+				std::cout << "Error! Some empty arguments found." << std::endl;
+			ifs.close();
+			ofs.close();
 		}
-		ifs.close();
-		ofs.close();
+		else
+			std::cout << "No file with name '" << fname << "' found." << std::endl;
 	}
-	return 0;
+	else
+		std::cout << "Wrong number of arguments! Use next syntax: ./replace fileName oldString newString" << std::endl;
+	return (0);
 }
