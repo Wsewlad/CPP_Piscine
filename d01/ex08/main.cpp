@@ -1,13 +1,14 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/20 16:34:35 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/20 16:34:37 by vfil             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
+#include "Human.hpp"
+
+int main( void )
+{
+    Human bot1;
+
+    bot1.action("meleeAttack", "Pig");
+    bot1.action("rangedAttack", "Pig");
+    bot1.action("intimidatingShout", "Pig");
+    return (0);
+}
 
 

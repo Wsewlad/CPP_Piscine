@@ -19,21 +19,14 @@ int	main(int argc, char const *argv[])
 			if (!s1.empty() && !s2.empty())
 			{
 				std::string str;
-				bool somethingReplaced = false;
-
 				while (std::getline(ifs, str, '\0'))
 				{
 					std::string::size_type pos;
 					if (s1.compare(s2) != 0)
 						while ((pos = str.find(s1)) != std::string::npos)
-						{
 							str.replace(pos, s1.length(), s2);
-							somethingReplaced = true;
-						}
-					ofs << str << std::endl;
+					ofs << str;
 				}
-				if (!somethingReplaced)
-					std::cout << "Nothing to replace." << std::endl;
 			}
 			else
 				std::cout << "Error! Some empty arguments found." << std::endl;
