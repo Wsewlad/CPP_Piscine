@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d7ad5ee-068b-4d28-80cc-1da6dad17314" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d01/ex07/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/d01/ex07/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d01/ex07/test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/d01/ex08/Human.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/d01/ex08/Human.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d01/ex08/Human.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/d01/ex08/Human.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/d01/ex08/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/d01/ex08/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/d01/ex09/Logger.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/d01/ex09/Logger.hpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,15 +26,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/d01/ex09/Logger.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="45">
+              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/d01/ex03/Zombie.hpp">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -171,12 +161,12 @@
       <workItem from="1547307637726" duration="125000" />
       <workItem from="1547307788374" duration="7111000" />
       <workItem from="1547377583913" duration="16653000" />
-      <workItem from="1547488243175" duration="7036000" />
+      <workItem from="1547488243175" duration="7163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30925000" />
+    <option name="totallyTimeSpent" value="31052000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -189,9 +179,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1269" y="37" width="1222" height="1295" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49958438" visible="true" weight="0.15847458" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49958438" visible="true" weight="0.15847458" />
       <window_info id="Structure" order="1" sideWeight="0.5004156" side_tool="true" weight="0.15889464" />
       <window_info id="Favorites" order="2" sideWeight="0.5004156" side_tool="true" weight="0.15889464" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -203,7 +192,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917705" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21612635" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21612635" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32917705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -520,8 +509,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/d01/ex09/Logger.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="45">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
