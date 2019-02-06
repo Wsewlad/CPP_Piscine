@@ -5,64 +5,72 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/29 15:53:21 by vfil              #+#    #+#             */
-/*   Updated: 2018/06/29 15:53:22 by vfil             ###   ########.fr       */
+/*   Created: 2019/01/25 23:12:33 by vfil              #+#    #+#             */
+/*   Updated: 2019/01/25 23:12:34 by vfil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
-#include <stdexcept>
-#include <iostream>
 
-Span::Span() {}
-
-Span::Span(unsigned int n) : _n(n)
-{}
-
-Span::Span(Span const & src)
+Span::Span(unsigned int N) : _N(N)
 {
-	*this = src;
+    return;
 }
 
-Span::~Span() {};
-
-Span & Span::operator=(Span const & src)
+Span::~Span(void)
 {
-	_n = src._n;
-	_ints = src._ints;
-
-	return *this;
+    return;
 }
 
-void	Span::addNumber(int nb)
+Span::Span(Span const & copy)
 {
-	if (_ints.size() <= _n)
-		_ints.push_front(nb);
-	else
-		throw std::length_error("No space!");
+    *this = copy;
+    return;
 }
 
-int 	Span::shortestSpan(void)
+Span & Span::operator=( Span const & sp )
 {
-	std::list<int> copy = _ints;
-	copy.sort();
-	int min = *std::max_element(_ints.begin(), _ints.end());
+    this->_N = sp.getN();
 
-	for (std::list<int>::iterator it1 = copy.end(); it1 != copy.begin(); it1--)
-		for (std::list<int>::iterator it2 = copy.end(); it2 != copy.begin(); it2--)
-		{
-			std::cout << *it1 << " - " << *it2 << " = " << (*it1 - *it2) << std::endl;
-			if ((*it1 - *it2) < min && (*it1 - *it2) >= 0 && it1 != it2)
-				min = (*it1 - *it2);
-		}
-	return min;
+    return *this;
 }
 
-int 	Span::longestSpan(void)
+unsigned int   Span::getN(void) const
 {
-	return (
-		*std::max_element(_ints.begin(), _ints.end())
-		 - 
-		*std::min_element(_ints.begin(), _ints.end())
-	);
+    return this->_N;
+}
+
+void    Span::addNumber(int nb)
+{
+    if (this->numbers.size() < this->getN())
+        this->numbers.push_back(nb);
+    else
+        throw std::logic_error("You try to add more then N elements...");
+}
+
+int     Span::shortestSpan(void)
+{
+    if (numbers.size() < 2)
+        throw std::logic_error("Less than 2 element...");
+
+    std::vector<int> tmp(numbers);
+
+    std::sort(tmp.begin(), tmp.end());
+
+    int min = tmp[1] - tmp[0];
+    for (int i = 0; tmp[i + 1]; i++)
+    {
+        if (tmp[i + 1] - tmp[i] < min)
+            min = tmp[i + 1] - tmp[i];
+    }
+
+    return abs(min);
+}
+
+int     Span::longestSpan(void)
+{
+    if (numbers.size() < 2)
+        throw std::logic_error("Less than 2 element...");
+
+    return (*std::max_element(numbers.begin(), numbers.end()) - *std::min_element(numbers.begin(), numbers.end()));
 }

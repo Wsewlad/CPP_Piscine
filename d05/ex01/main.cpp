@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.class.hpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/16 22:54:24 by vfil              #+#    #+#             */
-/*   Updated: 2019/01/16 22:55:47 by vfil             ###   ########.fr       */
+/*   Created: 2019/01/21 20:13:44 by vfil              #+#    #+#             */
+/*   Updated: 2019/01/22 22:06:28 by vfil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_CLASS_H
-# define FIXED_CLASS_H
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-# include <string>
-# include <iostream>
-
-class Fixed
+int	main(void)
 {
+	try
+	{
+		Form form1 = Form("Form1", 10, 15);
+		Bureaucrat bob = Bureaucrat("Bob", 50);
+		Bureaucrat jim = Bureaucrat("Jim", 9);
 
-	public:
-		Fixed( void );
-		Fixed( Fixed const & src );
-		~Fixed( void );
+		std::cout << form1;
+		std::cout << bob;
+		std::cout << jim;
+		jim.signForm(form1);
 
-		int		getRawBits( void ) const;
-		void	setRawBits( int const raw );
-
-		Fixed &	operator=( Fixed const & ft );
-
-	private:
-		
-		int					_fp_value;
-		static const int	_frt_bits = 8;
-};
-
-
-#endif
-
+		bob.signForm(form1);
+	}
+	catch (Form::GradeTooLowException & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	return (0);
+}

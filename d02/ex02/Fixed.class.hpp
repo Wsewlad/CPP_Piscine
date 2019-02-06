@@ -6,7 +6,7 @@
 /*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/16 22:54:24 by vfil              #+#    #+#             */
-/*   Updated: 2019/01/16 22:55:47 by vfil             ###   ########.fr       */
+/*   Updated: 2019/01/17 22:26:35 by vfil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,38 @@ class Fixed
 	public:
 		Fixed( void );
 		Fixed( Fixed const & src );
+		Fixed( int const const_int );
+		Fixed( float const const_float );
+
 		~Fixed( void );
 
 		int		getRawBits( void ) const;
 		void	setRawBits( int const raw );
 
+		float toFloat( void ) const;
+		int toInt( void ) const;
+
 		Fixed &	operator=( Fixed const & ft );
+
+		bool	operator>( Fixed const & ft );
+		bool	operator<( Fixed const & ft );
+		bool	operator>=( Fixed const & ft );
+		bool	operator<=( Fixed const & ft );
+		bool	operator==( Fixed const & ft );
+		bool	operator!=( Fixed const & ft );
+
+		Fixed 	operator+( Fixed const & ft ) const;
+		Fixed 	operator-( Fixed const & ft ) const;
+		Fixed 	operator*( Fixed const & ft ) const;
+		Fixed 	operator/( Fixed const & ft ) const;
+
+		Fixed &	operator++();
+		Fixed &	operator--();
+		Fixed operator++(int);
+		Fixed operator--(int);
+
+		static Fixed 	min(Fixed const & a, Fixed const & b);
+		static Fixed 	max(Fixed const & a, Fixed const & b);
 
 	private:
 		
@@ -35,6 +61,6 @@ class Fixed
 		static const int	_frt_bits = 8;
 };
 
+std::ostream &	operator<<( std::ostream & o, Fixed const & i );
 
 #endif
-

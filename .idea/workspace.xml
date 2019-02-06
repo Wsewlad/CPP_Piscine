@@ -9,9 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d7ad5ee-068b-4d28-80cc-1da6dad17314" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/d01/ex09/Logger.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/d01/ex09/Logger.hpp" afterDir="false" />
-    </list>
+    <list default="true" id="7d7ad5ee-068b-4d28-80cc-1da6dad17314" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,13 +21,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/d01/ex09/Logger.hpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/d02/ex00/Fixed.class.cpp">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/d02/ex00/Fixed.class.hpp">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -112,19 +120,13 @@
             <path>
               <item name="Piscine_CPP" type="b2602c69:ProjectViewProjectNode" />
               <item name="Piscine_CPP" type="462c0819:PsiDirectoryNode" />
-              <item name="d01" type="462c0819:PsiDirectoryNode" />
+              <item name="d02" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Piscine_CPP" type="b2602c69:ProjectViewProjectNode" />
               <item name="Piscine_CPP" type="462c0819:PsiDirectoryNode" />
-              <item name="d01" type="462c0819:PsiDirectoryNode" />
-              <item name="ex03" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Piscine_CPP" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Piscine_CPP" type="462c0819:PsiDirectoryNode" />
-              <item name="d01" type="462c0819:PsiDirectoryNode" />
-              <item name="ex09" type="462c0819:PsiDirectoryNode" />
+              <item name="d02" type="462c0819:PsiDirectoryNode" />
+              <item name="ex00" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,11 +164,12 @@
       <workItem from="1547307788374" duration="7111000" />
       <workItem from="1547377583913" duration="16653000" />
       <workItem from="1547488243175" duration="7163000" />
+      <workItem from="1547746786937" duration="95000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31052000" />
+    <option name="totallyTimeSpent" value="31147000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -180,7 +183,7 @@
   <component name="ToolWindowManager">
     <frame x="1269" y="37" width="1222" height="1295" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49958438" visible="true" weight="0.15847458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49958438" visible="true" weight="0.16101696" />
       <window_info id="Structure" order="1" sideWeight="0.5004156" side_tool="true" weight="0.15889464" />
       <window_info id="Favorites" order="2" sideWeight="0.5004156" side_tool="true" weight="0.15889464" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -192,7 +195,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917705" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21612635" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.21612635" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32917705" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -462,20 +465,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/d01/ex07/test">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/d01/ex07/test.replace">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/d01/ex07/test" />
+    <entry file="file://$PROJECT_DIR$/d01/ex07/test.replace" />
     <entry file="file://$PROJECT_DIR$/d01/ex07/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -510,9 +501,15 @@
     <entry file="file://$PROJECT_DIR$/d01/ex09/Logger.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d02/ex00/Fixed.class.cpp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d02/ex00/Fixed.class.hpp">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

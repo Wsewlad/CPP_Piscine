@@ -5,27 +5,36 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfil <vfil@student.unit.ua>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/25 20:12:34 by vfil              #+#    #+#             */
-/*   Updated: 2019/01/25 20:12:36 by vfil             ###   ########.fr       */
+/*   Created: 2019/01/25 23:11:45 by vfil              #+#    #+#             */
+/*   Updated: 2019/01/25 23:11:51 by vfil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
-#include <vector>
+#include "mutantstack.hpp"
 #include <iostream>
 
-int main (void)
+int main()
 {
-    int ints[] = { 10, 20, 30, 40 };
-
-    std::vector<int> testvector (ints, ints+4);
-
-    std::vector<int>::iterator it;
-    it = easyfind(testvector, 30);
-    if (it != testvector.end())
-        std::cout << "Element found in testvector: " << *it << '\n';
-    else
-        std::cout << "Element not found in testvector" << std::endl;
-
-    return (0);
+	MutantStack<int> mstack;
+	mstack.push(5);
+	mstack.push(17);
+	std::cout << mstack.top() << std::endl;
+	mstack.pop();
+	std::cout << mstack.size() << std::endl;
+	mstack.push(3);
+	mstack.push(5);
+	mstack.push(737);
+	mstack.push(0);
+	MutantStack<int>::iterator it = mstack.begin();
+	MutantStack<int>::iterator ite = mstack.end();
+	++it;
+	--it;
+	while (it != ite)
+	{
+		std::cout << *it << std::endl;
+		++it;
+	}
+	std::stack<int> s(mstack);
+	return 0;
 }
+
